@@ -58,7 +58,7 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.window.showInformationMessage('Run target successfully');
     } else {
       vscode.window.showErrorMessage('Run target fail, check target settings')
-    };
+    };5
   });
 
   context.subscriptions.push(outputChannel);
@@ -73,6 +73,6 @@ export function activate(context: vscode.ExtensionContext) {
 // deactivate method
 export function deactivate() {
   if (outputChannel) {
-    outputChannel.dispose(); // Освобождаем ресурсы канала
+    outputChannel.dispose();
   }
 }
