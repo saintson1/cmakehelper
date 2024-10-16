@@ -1,0 +1,11 @@
+{
+  "cmakehelper.GeneratorSetting": "MinGW Makefiles",
+  "cmakehelper.SourcePathSetting": "./",
+  "cmakehelper.BuildTypeSetting": "Debug",
+  "cmakehelper.buildPathSetting": "./build/",
+  "cmakehelper.CCompilerSetting": "clang",
+  "cmakehelper.CXXCompilerSetting": "clang++",
+  "cmakehelper.PathToTarget": "./",
+  "cmakehelper.TargetName": "taskA.exe",
+  "cmakehelper.TargetArgs": "asdfsa sssssss",
+}

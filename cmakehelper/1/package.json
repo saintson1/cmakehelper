@@ -1,0 +1,116 @@
+{
+  "name": "cmakehelper",
+  "displayName": "cmakehelper",
+  "description": "this extention to vscode help your development with cmake, and suppliment cmaketools(official cmake's extention to vscode)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.94.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "cmakehelper.BuildPathSetting": {
+        "type": "string",
+        "default": ".build/",
+        "description": "path to build directory"
+      },
+      "cmakehelper.GeneratorSetting": {
+        "type": "string",
+        "default": "MinGW Makefiles",
+        "description": "name of generator to cmake"
+      },
+      "cmakehelper.SourcePathSetting": {
+        "type": "string",
+        "default": "./",
+        "description": "path to cmake source file (CMakeLists.txt)"
+      },
+      "cmakehelper.BuildTypeSetting": {
+        "type": "string",
+        "default": "Debug",
+        "description": "type of build your project"
+      },
+      "cmakehelper.CCompilerSetting": {
+        "type": "string",
+        "default": "clang",
+        "description": "name of your C compiler"
+      },
+      "cmakehelper.CXXCompilerSetting": {
+        "type": "string",
+        "default": "clang++",
+        "description": "clang++"
+      },
+
+      "cmakehelper.anotherCacheGenericArgs": {
+        "type": "string",
+        "default": "",
+        "description": "another cache generic args"
+      },
+      "cmakehelper.PathToTarget": {
+        "type": "string",
+        "default": "./build/",
+        "description": "path to target"
+      },
+      "cmakehelper.TargetName": {
+        "type": "string",
+        "default": "",
+        "description": "name of target"
+      },
+      "cmakehelper.TargetArgs": {
+        "type": "string",
+        "default": "",
+        "description": "run target args"
+      }
+    },
+    "commands": [
+      {
+        "command": "cmakehelper.init",
+        "title": "cmakehelper: sanek molodec"
+      },
+      {
+        "command": "cmakehelper.checkCmakeVersion",
+        "title": "cmakehelper: check cmake version"
+      },
+      {
+        "command": "cmakehelper.cacheInit",
+        "title": "cmakehelper: init cmake cache"
+      },
+      {
+        "command": "cmakehelper.buildProj",
+        "title": "cmakehelper: build project"
+      },
+      {
+        "command": "cmakehelper.runTarget",
+        "title": "cmakehelper: target run"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.94.0",
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.11.1",
+    "typescript": "^5.6.2",
+    "ts-loader": "^9.5.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}

@@ -1,0 +1,6 @@
+cmakehelper/1/out
+cmakehelper/1/dist
+cmakehelper/1/node_modules
+cmakehelper/1/.vscode-test/
+*.vsix
+test_proj/build/
